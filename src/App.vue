@@ -1,7 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DashboardLayout from './layouts/DashboardLayout.vue'
+</script>
 
 <template>
-  <div class="flex flex-center">
-    <h1 class="text-red-600">Hello world!</h1>
-  </div>
+  <DashboardLayout />
 </template>
