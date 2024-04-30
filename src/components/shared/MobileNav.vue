@@ -19,7 +19,7 @@ import SearchComponent from './SearchComponent.vue'
         alt="hamburger"
         height="36"
         width="36"
-        className="sm:hidden"
+        className="md:hidden"
       />
     </SheetTrigger>
     <SheetContent

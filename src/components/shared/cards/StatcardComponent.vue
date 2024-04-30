@@ -16,19 +16,19 @@ defineProps<{
 
 <template>
   <div
-    class="text-dark-100 flex gap-3 bg-white p-4 w-[250px] h-[125px] rounded-lg shadow-sm shadow-slate-200"
+    class="text-dark-100 flex gap-3 sm:gap-2 bg-white p-4 w-[250px] h-[125px] max-sm:w-[150px] max-sm:h-[90px] rounded-lg shadow-sm shadow-slate-200 max-sm:p-2"
   >
-    <div>
+    <div class="max-sm:hidden">
       <slot name="main-icon" />
     </div>
     <div class="flex flex-col">
-      <h3 class="h3-bold">
+      <h3 class="sm:h3-bold font-bold">
         {{ formatNumber(item.title) }}
       </h3>
-      <div class="subtitle-1 capitalize">
+      <div class="subtitle-1 capitalize max-sm:text-[12px]">
         {{ item.subtitle }}
       </div>
-      <div class="flex gap-2 mt-auto">
+      <div class="flex gap-2 mt-auto max-sm:text-[12px]">
         <div
           class="flex gap-1"
           :class="
@@ -42,7 +42,9 @@ defineProps<{
           <slot name="footer-icon" />
           {{ item.footer.percentage }}%
         </div>
-        <div class="text-gray-400 from-neutral-200 capitalize">{{ item.footer.period }}</div>
+        <div class="text-gray-400 from-neutral-200 capitalize">
+          {{ item.footer.period }}
+        </div>
       </div>
     </div>
   </div>

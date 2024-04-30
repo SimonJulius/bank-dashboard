@@ -14,7 +14,7 @@ import BottomTabComponent from '@/components/shared/BottomTabComponent.vue'
       <slot />
     </div>
     <Teleport to="body">
-      <BottomTabComponent class="fixed bottom-0 z-50 rounded-t-2xl bg-primary-500 sm:hidden" />
+      <BottomTabComponent class="fixed bottom-0 z-50 rounded-t-2xl bg-primary-500 md:hidden" />
     </Teleport>
   </div>
 </template>

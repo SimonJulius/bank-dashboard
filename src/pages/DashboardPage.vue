@@ -102,10 +102,10 @@ const recentRequest = [
 </script>
 
 <template>
-  <div class="bg-gray-100 w-full px-6">
-    <div class="flex-between gap-6 pt-6 flex-wrap">
+  <div class="bg-gray-100 w-full px-6 max-sm:px-3 max-md:pb-24 pb-6">
+    <div class="flex-between gap-6 pt-6 flex-wrap max-sm:gap-2">
       <div class="" v-for="item of appRequest" :key="item.title">
-        <StatcardComponent :item="item">
+        <StatcardComponent :item="item" class="">
           <template #main-icon>
             <ClockIcon v-if="item.subtitle === 'pending requests'" />
             <DoubleCheck v-else-if="item.subtitle === 'approved requests'" />
@@ -120,6 +120,7 @@ const recentRequest = [
               viewBox="209.06 323.52 49.51 34.06"
               width="15"
               :class="item.subtitle === 'total user' ? 'text-yellow-500' : 'text-green-400'"
+              class="max-md:hidden"
               v-if="item.subtitle !== 'total agents'"
             >
               <g stroke="null">
@@ -179,7 +180,7 @@ const recentRequest = [
             <svg
               xmlns="http://www.w3.org/2000/svg"
               stroke="null"
-              class="text-red-500"
+              class="text-red-500 max-md:hidden"
               v-else
               viewBox="198.5 307.62 36.84 30.89"
               width="15"
@@ -240,11 +241,11 @@ const recentRequest = [
         </StatcardComponent>
       </div>
     </div>
-    <div class="mt-8">
-      <Table class="bg-white max-w-[800px] rounded-xl shadow-xl shadow-slate-200">
+    <div class="mt-8 max-w-[800px]">
+      <Table class="bg-white rounded-xl shadow-xl shadow-slate-200">
         <TableHeader class="pt-6">
           <TableRow class="h-[70px] border-none flex items-center px-6">
-            <h4 class="h4-semibold text-dark-100 w-[300px]">Recent Requests</h4>
+            <h4 class="h4-semibold text-dark-100">Recent Requests</h4>
           </TableRow>
           <TableRow class="">
             <TableHead class="w-[100px] px-6">
@@ -258,7 +259,7 @@ const recentRequest = [
             <TableHead></TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody>
+        <TableBody class="overflow-hidden">
           <TableRow v-for="request in recentRequest" :key="request.profile.email">
             <TableCell class="font-medium pl-6 flex gap-4">
               <span class="min-w-10 h-10 p-2 rounded-lg bg-gray-300 items-center"></span>

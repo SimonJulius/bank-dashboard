@@ -11,7 +11,7 @@ const getImageUrl = (link: string | URL) => {
   <div class="w-full p-4 flex-between">
     <div v-for="tab of tabLinks" :key="tab.label" class="flex flex-col justify-center items-center">
       <img :src="getImageUrl(tab.imgURL)" width="20" height="20" :alt="tab.label" />
-      <p class="text-light-200 text-[12px]">
+      <p class="text-light-200 max-sm:text-[12px] text-[16px]">
         {{ tab.label }}
       </p>
     </div>

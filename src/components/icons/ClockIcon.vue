@@ -1,5 +1,7 @@
 <template>
-  <div class="w-14 h-14 rounded-full bg-blue-800 flex-center p-4 font-bold bg-opacity-10">
+  <div
+    class="w-14 h-14 rounded-full bg-blue-800 flex-center sm:p-4 font-bold bg-opacity-10 max-sm:w-10 max-sm:h-10 p-1"
+  >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="clock-counter-clockwise">
       <rect width="256" height="256" fill="none"></rect>
       <line
