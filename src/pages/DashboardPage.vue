@@ -4,6 +4,17 @@ import DoubleCheck from '@/components/icons/DoubleCheck.vue'
 import UsersIcon from '@/components/icons/UsersIcon.vue'
 import TreasureBox from '@/components/icons/TreasureBox.vue'
 import StatcardComponent from '@/components/shared/cards/StatcardComponent.vue'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from '@/components/ui/table'
+import StatusTag from '@/components/shared/StatusTag.vue'
+import { ChevronRight } from 'lucide-vue-next'
+
 // defineProps<{}>()
 
 interface AppRequest {
@@ -49,11 +60,50 @@ const appRequest: AppRequest[] = [
     }
   }
 ]
+
+const recentRequest = [
+  {
+    profile: {
+      name: 'Michael Olu',
+      email: 'michael@mail.com'
+    },
+    type: 'new agent',
+    status: 'pending',
+    date: '23/04/18'
+  },
+  {
+    profile: {
+      name: 'Chioma James',
+      email: 'alexa@mail.com'
+    },
+    type: 'account deactivation',
+    status: 'pending',
+    date: '23/04/18'
+  },
+  {
+    profile: {
+      name: 'Boluwatife Ade',
+      email: 'laurel@mail.com'
+    },
+    type: 'new user',
+    status: 'active',
+    date: '23/04/18'
+  },
+  {
+    profile: {
+      name: 'Miriam Eric',
+      email: 'miriam@mail.com'
+    },
+    type: 'email auth',
+    status: 'active',
+    date: '23/04/18'
+  }
+]
 </script>
 
 <template>
-  <div class="bg-gray-100 w-full">
-    <div class="flex gap-6 pt-6 px-4 flex-wrap justify-center">
+  <div class="bg-gray-100 w-full px-6">
+    <div class="flex-between gap-6 pt-6 flex-wrap">
       <div class="" v-for="item of appRequest" :key="item.title">
         <StatcardComponent :item="item">
           <template #main-icon>
@@ -128,7 +178,6 @@ const appRequest: AppRequest[] = [
             </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              style="vector-effect: non-scaling-stroke"
               stroke="null"
               class="text-red-500"
               v-else
@@ -190,6 +239,53 @@ const appRequest: AppRequest[] = [
           </template>
         </StatcardComponent>
       </div>
+    </div>
+    <div class="mt-8">
+      <Table class="bg-white max-w-[800px] rounded-xl shadow-xl shadow-slate-200">
+        <TableHeader class="pt-6">
+          <TableRow class="h-[70px] border-none flex items-center px-6">
+            <h4 class="h4-semibold text-dark-100 w-[300px]">Recent Requests</h4>
+          </TableRow>
+          <TableRow class="">
+            <TableHead class="w-[100px] px-6">
+              <span class="text-gray-400 font-bold">Name/Email</span>
+            </TableHead>
+            <TableHead><span class="text-gray-400 font-bold">Type</span></TableHead>
+            <TableHead><span class="text-gray-400 font-bold">Status</span></TableHead>
+            <TableHead class="text-right"
+              ><span class="text-gray-400 font-bold">Date</span></TableHead
+            >
+            <TableHead></TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow v-for="request in recentRequest" :key="request.profile.email">
+            <TableCell class="font-medium pl-6 flex gap-4">
+              <span class="min-w-10 h-10 p-2 rounded-lg bg-gray-300 items-center"></span>
+              <div>
+                <div class="text-dark-100 font-semibold text-[16px]">
+                  {{ request.profile.name }}
+                </div>
+                <div class="text-slate-400">
+                  {{ request.profile.email }}
+                </div>
+              </div>
+            </TableCell>
+            <TableCell class="capitalize text-slate-400">{{ request.type }}</TableCell>
+            <TableCell>
+              <StatusTag :label="request.status" />
+            </TableCell>
+            <TableCell>
+              {{ request.date }}
+            </TableCell>
+            <TableCell>
+              <span class="h-[25px] w-[25px] flex-center rounded-full bg-[#cfe2f3] bg-opacity-50">
+                <ChevronRight class="h-[20px] w-[20px] text-primary-500" />
+              </span>
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </div>
   </div>
 </template>

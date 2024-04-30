@@ -1,5 +1,5 @@
 <template>
-  <div class="w-14 h-14 rounded-full bg-[#fac400] flex-center p-4 font-bold bg-opacity-10">
+  <div class="w-14 h-14 rounded-full bg-[#ffbd00] flex-center p-4 font-bold bg-opacity-10">
     <svg
       width="800px"
       height="800px"
@@ -9,14 +9,14 @@
     >
       <path
         d="M1.5 12.5L5.57574 16.5757C5.81005 16.8101 6.18995 16.8101 6.42426 16.5757L9 14"
-        stroke="#fac400"
+        stroke="#ffbd00"
         stroke-width="1.5"
         stroke-linecap="round"
       />
-      <path d="M16 7L12 11" stroke="#fac400" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M16 7L12 11" stroke="#ffbd00" stroke-width="1.5" stroke-linecap="round" />
       <path
         d="M7 12L11.5757 16.5757C11.8101 16.8101 12.1899 16.8101 12.4243 16.5757L22 7"
-        stroke="#fac400"
+        stroke="#ffbd00"
         stroke-width="1.5"
         stroke-linecap="round"
       />

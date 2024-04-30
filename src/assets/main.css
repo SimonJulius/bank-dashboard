@@ -24,6 +24,9 @@
   .h3-semibold {
     @apply text-[20px] font-semibold leading-[24.8px];
   }
+  .h4-semibold {
+    @apply text-[18px] font-semibold leading-[24.8px];
+  }
   .subtitle-1 {
     @apply text-[16px] text-gray-400 leading-[24.8px];
   }
