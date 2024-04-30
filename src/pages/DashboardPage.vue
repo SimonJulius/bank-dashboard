@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/table'
 import StatusTag from '@/components/shared/StatusTag.vue'
 import { ChevronRight } from 'lucide-vue-next'
+import BottomTabComponent from '@/components/shared/BottomTabComponent.vue'
 
 // defineProps<{}>()
 
@@ -287,6 +288,7 @@ const recentRequest = [
         </TableBody>
       </Table>
     </div>
+    <BottomTabComponent />
   </div>
 </template>
 

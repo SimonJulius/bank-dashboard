@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NavbarComponent from '@/components/shared/NavbarComponent.vue'
 import SidebarComponent from '@/components/shared/SidebarComponent.vue'
+import BottomTabComponent from '@/components/shared/BottomTabComponent.vue'
 </script>
 
 <template>
@@ -12,5 +13,8 @@ import SidebarComponent from '@/components/shared/SidebarComponent.vue'
       </div>
       <slot />
     </div>
+    <Teleport to="body">
+      <BottomTabComponent class="fixed bottom-0 z-50 rounded-t-2xl bg-primary-500 sm:hidden" />
+    </Teleport>
   </div>
 </template>
