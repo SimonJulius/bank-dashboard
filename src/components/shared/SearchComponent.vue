@@ -11,7 +11,7 @@ const handleSearchChange = () => {
 </script>
 
 <template>
-  <div class="relative w-full max-lg:hidden max-w-[280px]">
+  <div class="relative w-full max-w-[280px]">
     <div class="bg-light-500 relative flex min-h-[38px] grow items-center gap-1 rounded-md px-4">
       <img
         src="@/assets/icons/search.svg"
@@ -23,7 +23,7 @@ const handleSearchChange = () => {
       <Input
         v-model="searchText"
         type="text"
-        placeholder="Search everywhere..."
+        placeholder="Enter keywords..."
         class="paragraph-regular no-focus placeholder border-none shadow-none outline-none bg-transparent"
       />
     </div>
