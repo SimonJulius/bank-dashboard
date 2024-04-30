@@ -5,7 +5,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue
 } from '@/components/ui/select'
@@ -13,7 +12,7 @@ import {
 
 <template>
   <nav
-    class="flex light-border bg-white w-full gap-5 p-6 shadow-light-300 dark:shadow-none sm:px-12"
+    class="flex border-none bg-white w-full gap-5 p-6 shadow-light-300 dark:shadow-none sm:px-12"
   >
     <router-link to="/" class="flex items-center gap-1 max-sm:hidden">
       <h2 class="h2-bold text-dark-100">Dashboard</h2>

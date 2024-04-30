@@ -10,7 +10,7 @@ const getImageUrl = (link: string | URL) => {
 
 <template>
   <section
-    class="bg-primary-500 text-white sticky flex h-screen flex-col overflow-y-auto border-r pt-8 px-4 max-sm:hidden lg:w-[266px]"
+    class="bg-primary-500 text-white sticky flex min-h-screen flex-col overflow-y-auto border-r pt-8 px-4 max-sm:hidden lg:w-[300px]"
   >
     <div class="flex flex-col self-stretch">
       <img src="@/assets/icons/wema.svg" alt="" width="80" height="80" class="self-center" />

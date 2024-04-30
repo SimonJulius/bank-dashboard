@@ -1,3 +1,9 @@
+interface SidebarLink {
+  imgURL: string
+  route: string
+  label: string
+}
+
 export const sidebarLinks: SidebarLink[] = [
   {
     imgURL: '../../assets/icons/home.svg',

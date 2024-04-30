@@ -24,7 +24,9 @@
   .h3-semibold {
     @apply text-[20px] font-semibold leading-[24.8px];
   }
-
+  .subtitle-1 {
+    @apply text-[16px] text-gray-400 leading-[24.8px];
+  }
   .flex-center {
     @apply flex justify-center items-center;
   }
@@ -42,4 +44,12 @@
   .no-focus {
     @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
   }
+}
+
+html {
+  background: rgb(243 244 246);
+}
+
+body {
+  background: rgb(243 244 246);
 }
