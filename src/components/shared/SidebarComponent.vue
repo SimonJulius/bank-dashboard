@@ -18,7 +18,10 @@ const getImageUrl = (link: string | URL) => {
     </div>
     <div class="flex h-full flex-col gap-6 mt-6 max-lg:items-center">
       <template v-for="item of sidebarLinks" :key="item.route">
-        <div class="flex gap-3 items-center">
+        <div
+          class="flex gap-3 items-center mb-4 px-2"
+          :class="{ 'bg-white bg-opacity-15 border-r-4 py-2 rounded-md': item.route === '/' }"
+        >
           <img
             :src="getImageUrl(item.imgURL)"
             width="25"
@@ -26,11 +29,18 @@ const getImageUrl = (link: string | URL) => {
             :alt="item.label"
             class="max-lg:w-[35px]"
           />
-          <p class="text-light-200 max-lg:hidden">
+          <p class="text-light-200 max-lg:hidden font-bold text-[18px]">
             {{ item.label }}
           </p>
         </div>
       </template>
+    </div>
+    <div class="bg-white bg-opacity-15 flex gap-2 mt-6 p-4 rounded-xl items-center mb-40">
+      <span class="min-w-12 h-12 p-2 rounded-full bg-gray-300"></span>
+      <div>
+        <p class="font-bold">Nafisa Sh.</p>
+        <p class="text-light-200 text-[12px]">Support manager</p>
+      </div>
     </div>
   </section>
 </template>

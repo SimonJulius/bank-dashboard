@@ -2,13 +2,15 @@ interface SidebarLink {
   imgURL: string
   route: string
   label: string
+  imgPrimary?: string
 }
 
 export const sidebarLinks: SidebarLink[] = [
   {
-    imgURL: '../../assets/icons/home.svg',
+    imgURL: '../../assets/icons/home-white.svg',
     route: '/',
-    label: 'Dashboard'
+    label: 'Dashboard',
+    imgPrimary: '../../assets/icons/home-primary.svg'
   },
   {
     imgURL: '../../assets/icons/bubble.svg',
@@ -16,17 +18,17 @@ export const sidebarLinks: SidebarLink[] = [
     label: 'Request'
   },
   {
-    imgURL: '../../assets/icons/bubble.svg',
+    imgURL: '../../assets/icons/document.svg',
     route: '#',
     label: 'KYCs'
   },
   {
-    imgURL: '../../assets/icons/bubble.svg',
+    imgURL: '../../assets/icons/report.svg',
     route: '#',
     label: 'Reports'
   },
   {
-    imgURL: '../../assets/icons/users.svg',
+    imgURL: '../../assets/icons/audit.svg',
     route: '#',
     label: 'Audit Trail'
   },
@@ -43,9 +45,10 @@ export const sidebarLinks: SidebarLink[] = [
 ]
 export const tabLinks: SidebarLink[] = [
   {
-    imgURL: '../../assets/icons/home.svg',
+    imgURL: '../../assets/icons/home-white.svg',
     route: '/',
-    label: 'Dashboard'
+    label: 'Dashboard',
+    imgPrimary: '../../assets/icons/home-primary.svg'
   },
   {
     imgURL: '../../assets/icons/bubble.svg',
@@ -53,17 +56,17 @@ export const tabLinks: SidebarLink[] = [
     label: 'Request'
   },
   {
-    imgURL: '../../assets/icons/bubble.svg',
+    imgURL: '../../assets/icons/document.svg',
     route: '#',
     label: 'KYCs'
   },
   {
-    imgURL: '../../assets/icons/bubble.svg',
+    imgURL: '../../assets/icons/report.svg',
     route: '#',
     label: 'Reports'
   },
   {
-    imgURL: '../../assets/icons/users.svg',
+    imgURL: '../../assets/icons/audit.svg',
     route: '#',
     label: 'Audit Trail'
   }
