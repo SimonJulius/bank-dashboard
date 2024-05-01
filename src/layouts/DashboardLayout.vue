@@ -11,7 +11,9 @@ import BottomTabComponent from '@/components/shared/BottomTabComponent.vue'
       <div>
         <NavbarComponent />
       </div>
-      <slot />
+      <div class="max-w-5xl mx-auto">
+        <slot />
+      </div>
     </div>
     <Teleport to="body">
       <BottomTabComponent class="fixed bottom-0 z-50 rounded-t-2xl bg-primary-500 md:hidden" />

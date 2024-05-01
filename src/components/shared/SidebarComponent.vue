@@ -10,7 +10,7 @@ const getImageUrl = (link: string | URL) => {
 
 <template>
   <section
-    class="bg-primary-500 text-white sticky flex min-h-screen flex-col overflow-y-auto border-r pt-8 px-4 max-md:hidden lg:w-[300px]"
+    class="bg-primary-500 text-white flex min-h-screen flex-col overflow-y-auto border-r pt-8 px-4 max-md:hidden lg:min-w-[200px] lg:w-3/12 max-lg:min-w-[100px]"
   >
     <div class="flex flex-col self-stretch">
       <img src="@/assets/icons/wema.svg" alt="" width="80" height="80" class="self-center" />
@@ -19,7 +19,13 @@ const getImageUrl = (link: string | URL) => {
     <div class="flex h-full flex-col gap-6 mt-6 max-lg:items-center">
       <template v-for="item of sidebarLinks" :key="item.route">
         <div class="flex gap-3 items-center">
-          <img :src="getImageUrl(item.imgURL)" width="25" height="25" :alt="item.label" />
+          <img
+            :src="getImageUrl(item.imgURL)"
+            width="25"
+            height="25"
+            :alt="item.label"
+            class="max-lg:w-[35px]"
+          />
           <p class="text-light-200 max-lg:hidden">
             {{ item.label }}
           </p>

@@ -13,6 +13,8 @@ import {
   TableRow
 } from '@/components/ui/table'
 import StatusTag from '@/components/shared/StatusTag.vue'
+import BarChart from '@/components/shared/charts/BarChart.vue'
+import SplinesChart from '@/components/shared/charts/SplinesChart.vue'
 import { ChevronRight } from 'lucide-vue-next'
 
 // defineProps<{}>()
@@ -115,7 +117,6 @@ const recentRequest = [
           <template #footer-icon>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              style="vector-effect: non-scaling-stroke"
               stroke="null"
               viewBox="209.06 323.52 49.51 34.06"
               width="15"
@@ -241,7 +242,15 @@ const recentRequest = [
         </StatcardComponent>
       </div>
     </div>
-    <div class="mt-8 max-w-[800px]">
+    <div class="flex mt-8 gap-2 justify-between flex-wrap max-lg:gap-4">
+      <div class="w-8/12 min-w-72 max-lg:w-full">
+        <SplinesChart />
+      </div>
+      <div class="w-3/12 min-w-60 max-lg:w-full">
+        <BarChart />
+      </div>
+    </div>
+    <div class="mt-8 max-w-[800px] max-lg:w-full">
       <Table class="bg-white rounded-xl shadow-xl shadow-slate-200">
         <TableHeader class="pt-6">
           <TableRow class="h-[70px] border-none flex items-center px-6">
