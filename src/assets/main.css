@@ -51,10 +51,12 @@
 
 html {
   background: rgb(243 244 246);
+  box-sizing: border-box;
 }
 
 body {
   background: rgb(243 244 246);
+  box-sizing: border-box;
 }
 
 .max-w-5xl {

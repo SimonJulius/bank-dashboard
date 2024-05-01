@@ -26,7 +26,6 @@ const options = {
   barThickness: 5,
   borderRadius: 5,
   borderSkipped: false,
-  tension: 0.4,
   scales: {
     x: {
       grid: {

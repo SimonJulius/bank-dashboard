@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { sidebarLinks } from '@/constants'
 
-const getImageUrl = (link: string | URL) => {
-  const linkd = new URL(link, import.meta.url)
-  console.log(linkd.href)
+const getImageUrl = (fileName: string) => {
+  const linkd = new URL(`../../assets/icons/${fileName}.svg`, import.meta.url)
   return linkd.href
 }
 </script>
