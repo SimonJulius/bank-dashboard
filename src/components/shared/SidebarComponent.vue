@@ -38,7 +38,7 @@ const getImageUrl = (fileName: string) => {
       <span class="min-w-12 h-12 p-2 rounded-full bg-gray-300"></span>
       <div>
         <p class="font-bold">Nafisa Sh.</p>
-        <p class="text-light-200 text-[12px]">Support manager</p>
+        <p class="text-light-200 text-[12px] max-lg:hidden">Support manager</p>
       </div>
     </div>
   </section>
