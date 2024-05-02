@@ -34,7 +34,9 @@ const getImageUrl = (fileName: string) => {
         </div>
       </template>
     </div>
-    <div class="bg-white bg-opacity-15 gap-2 mt-6 p-4 rounded-xl flex-center mb-40">
+    <div
+      class="bg-white bg-opacity-15 flex gap-2 mt-6 p-4 rounded-xl items-center mb-40 max-lg:flex-center"
+    >
       <span class="min-w-12 h-12 p-2 rounded-full bg-gray-300"></span>
       <div class="max-lg:hidden">
         <p class="font-bold">Nafisa Sh.</p>
